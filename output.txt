@@ -1,0 +1,643 @@
+INFO: Scanner configuration file: /opt/sonar-scanner-2.6/conf/sonar-scanner.properties
+INFO: Project root configuration file: /home/dad/nethack-3.6.0/sonar-project.properties
+INFO: SonarQube Scanner 2.6
+INFO: Java 1.8.0_91 Oracle Corporation (64-bit)
+INFO: Linux 3.10.0-327.18.2.el7.x86_64 amd64
+INFO: Error stacktraces are turned on.
+INFO: User cache: /home/dad/.sonar/cache
+DEBUG: Extract sonar-scanner-api-batch in temp...
+DEBUG: Get bootstrap index...
+DEBUG: Download: http://localhost:9000/batch_bootstrap/index
+DEBUG: Get bootstrap completed
+DEBUG: Create isolated classloader...
+DEBUG: Start temp cleaning...
+DEBUG: Temp cleaning done
+DEBUG: Execution getVersion
+DEBUG: Execution start
+DEBUG: Publish global mode
+DEBUG: cache: /home/dad/.sonar/ws_cache/http%3A%2F%2Flocalhost%3A9000/global
+INFO: Load global repositories
+DEBUG: GET 200 http://localhost:9000/batch/global | time=109ms
+INFO: Load global repositories (done) | time=186ms
+INFO: User cache: /home/dad/.sonar/cache
+INFO: Load plugins index
+DEBUG: GET 200 http://localhost:9000/deploy/plugins/index.txt | time=5ms
+INFO: Load plugins index (done) | time=7ms
+DEBUG: Load plugins
+DEBUG: Load plugins (done) | time=87ms
+DEBUG: API compatibility mode is enabled on plugin C / C++ / Objective-C [cpp] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin CSS [css] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin Android [android] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin Google Analytics [googleanalytics] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin SVN [scmsvn] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin JavaScript [javascript] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin C# [csharp] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin Java [java] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin Web [web] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin Git [scmgit] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin XML [xml] (built with API lower than 5.2)
+DEBUG: API compatibility mode is enabled on plugin Generic Coverage [genericcoverage] (built with API lower than 5.2)
+DEBUG: Plugins:
+DEBUG:   * C / C++ / Objective-C 3.11 (cpp)
+DEBUG:   * CSS 1.8 (css)
+DEBUG:   * Android 1.1 (android)
+DEBUG:   * Google Analytics 1.1 (googleanalytics)
+DEBUG:   * SVN 1.3 (scmsvn)
+DEBUG:   * JavaScript 2.12 (javascript)
+DEBUG:   * C# 5.2 (csharp)
+DEBUG:   * Java 3.13.1 (java)
+DEBUG:   * Web 2.4 (web)
+DEBUG:   * Git 1.2 (scmgit)
+DEBUG:   * XML 1.4.1 (xml)
+DEBUG:   * Generic Coverage 1.2 (genericcoverage)
+DEBUG: Execution getVersion
+INFO: SonarQube server 5.5
+INFO: Default locale: "en_US", source code encoding: "UTF-8"
+DEBUG: Work directory: /home/dad/nethack-3.6.0/.sonar
+DEBUG: Execution getVersion
+DEBUG: Execution execute
+INFO: Process project properties
+DEBUG: Process project properties (done) | time=2ms
+DEBUG: cache: /home/dad/.sonar/ws_cache/http%3A%2F%2Flocalhost%3A9000/5.5/projects/my%3Aproject
+INFO: Load project repositories
+DEBUG: GET 404 http://localhost:9000/batch/project.protobuf?key=my%3Aproject | time=39ms
+DEBUG: Project repository not available - continuing without it
+org.sonarqube.ws.client.HttpException: Error 404 on http://localhost:9000/batch/project.protobuf?key=my%3Aproject
+	at org.sonarqube.ws.client.BaseResponse.failIfNotSuccessful(BaseResponse.java:34) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.bootstrap.BatchWsClient.failIfUnauthorized(BatchWsClient.java:96) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.bootstrap.BatchWsClient.call(BatchWsClient.java:67) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.cache.WSLoader$3.load(WSLoader.java:85) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.cache.WSLoader$3.load(WSLoader.java:81) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.cache.WSLoader.loadFromServer(WSLoader.java:225) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.cache.WSLoader.loadFromServerFirst(WSLoader.java:188) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.cache.WSLoader.load(WSLoader.java:148) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.cache.WSLoader.loadStream(WSLoader.java:124) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.repository.DefaultProjectRepositoriesLoader.load(DefaultProjectRepositoriesLoader.java:60) ~[sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.repository.ProjectRepositoriesProvider.provide(ProjectRepositoriesProvider.java:45) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at org.picocontainer.injectors.MethodInjector.invokeMethod(MethodInjector.java:129) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.MethodInjector.access$000(MethodInjector.java:39) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.MethodInjector$2.run(MethodInjector.java:113) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.MethodInjector.decorateComponentInstance(MethodInjector.java:120) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.CompositeInjector.decorateComponentInstance(CompositeInjector.java:58) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.Reinjector.reinject(Reinjector.java:142) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.ProviderAdapter.getComponentInstance(ProviderAdapter.java:96) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.core.platform.ComponentContainer$ExtendedDefaultPicoContainer.getComponent(ComponentContainer.java:67) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:632) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.parameters.BasicComponentParameter$1.resolveInstance(BasicComponentParameter.java:118) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.parameters.ComponentParameter$1.resolveInstance(ComponentParameter.java:136) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.SingleMemberInjector.getParameter(SingleMemberInjector.java:78) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.ConstructorInjector$CtorAndAdapters.getParameterArguments(ConstructorInjector.java:309) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:335) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.core.platform.ComponentContainer$ExtendedDefaultPicoContainer.getComponent(ComponentContainer.java:67) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.core.platform.ComponentContainer.getComponentByType(ComponentContainer.java:272) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.scan.ProjectScanContainer.doBeforeStart(ProjectScanContainer.java:116) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:140) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.scan.ProjectScanContainer.startComponents(ProjectScanContainer.java:128) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:127) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.task.ScanTask.execute(ScanTask.java:55) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.task.TaskContainer.doAfterStart(TaskContainer.java:86) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:142) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:127) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.bootstrap.GlobalContainer.executeTask(GlobalContainer.java:124) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonar.batch.bootstrapper.Batch.executeTask(Batch.java:119) [sonar-scanner-engine-shaded-5.5.jar:na]
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:62) [sonar-scanner-api-batch5086107912593933010.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60) [sonar-scanner-cli-2.6.jar:na]
+	at com.sun.proxy.$Proxy0.execute(Unknown Source) [na:na]
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:240) [sonar-scanner-cli-2.6.jar:na]
+	at org.sonarsource.scanner.api.EmbeddedScanner.runAnalysis(EmbeddedScanner.java:151) [sonar-scanner-cli-2.6.jar:na]
+	at org.sonarsource.scanner.cli.Main.runAnalysis(Main.java:110) [sonar-scanner-cli-2.6.jar:na]
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:72) [sonar-scanner-cli-2.6.jar:na]
+	at org.sonarsource.scanner.cli.Main.main(Main.java:60) [sonar-scanner-cli-2.6.jar:na]
+
+INFO: Load project repositories (done) | time=45ms
+DEBUG: Available languages:
+DEBUG:   * C => "c"
+DEBUG:   * C++ => "cpp"
+DEBUG:   * Objective-C => "objc"
+DEBUG:   * CSS => "css"
+DEBUG:   * JavaScript => "js"
+DEBUG:   * C# => "cs"
+DEBUG:   * Java => "java"
+DEBUG:   * Web => "web"
+DEBUG:   * XML => "xml"
+INFO: Load quality profiles
+DEBUG: GET 200 http://localhost:9000/api/qualityprofiles/search.protobuf?defaults=true | time=23ms
+INFO: Load quality profiles (done) | time=41ms
+INFO: Load active rules
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=c-sonar-way-47868&p=1&ps=500 | time=224ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=cpp-sonar-way-56788&p=1&ps=500 | time=227ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=cs-sonar-way-75893&p=1&ps=500 | time=117ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=css-sonar-way-14987&p=1&ps=500 | time=164ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=java-sonar-way-66000&p=1&ps=500 | time=597ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=js-sonar-way-40333&p=1&ps=500 | time=88ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=objc-sonar-way-57465&p=1&ps=500 | time=231ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=web-sonar-way-36494&p=1&ps=500 | time=81ms
+DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives&activation=true&qprofile=xml-sonar-way-43802&p=1&ps=500 | time=34ms
+INFO: Load active rules (done) | time=1934ms
+INFO: SCM provider autodetection failed. No SCM provider claims to support this project. Please use sonar.scm.provider to define SCM of your project.
+INFO: Publish mode
+DEBUG: Start recursive analysis of project modules
+INFO: -------------  Scan My project
+INFO: Load server rules
+DEBUG: GET 200 http://localhost:9000/api/rules/list.protobuf | time=681ms
+INFO: Load server rules (done) | time=700ms
+DEBUG: Initializers : 
+INFO: Base dir: /home/dad/nethack-3.6.0
+INFO: Working dir: /home/dad/nethack-3.6.0/.sonar
+INFO: Source paths: .
+INFO: Source encoding: UTF-8, default locale: en_US
+INFO: Index files
+DEBUG: Declared extensions of language C were converted to sonar.lang.patterns.c : **/*.c,**/*.h
+DEBUG: Declared extensions of language C++ were converted to sonar.lang.patterns.cpp : **/*.cc,**/*.cpp,**/*.cxx,**/*.c++,**/*.hh,**/*.hpp,**/*.hxx,**/*.h++,**/*.ipp
+DEBUG: Declared extensions of language Objective-C were converted to sonar.lang.patterns.objc : **/*.m
+DEBUG: Declared extensions of language CSS were converted to sonar.lang.patterns.css : **/*.css
+DEBUG: Declared extensions of language JavaScript were converted to sonar.lang.patterns.js : **/*.js
+DEBUG: Declared extensions of language C# were converted to sonar.lang.patterns.cs : **/*.cs
+DEBUG: Declared extensions of language Java were converted to sonar.lang.patterns.java : **/*.java,**/*.jav
+DEBUG: Declared extensions of language Web were converted to sonar.lang.patterns.web : **/*.html,**/*.xhtml,**/*.rhtml,**/*.shtml
+DEBUG: Declared extensions of language XML were converted to sonar.lang.patterns.xml : **/*.xml
+DEBUG: Language of file 'include/align.h' is detected to be 'c'
+DEBUG: Language of file 'include/artifact.h' is detected to be 'c'
+DEBUG: Language of file 'include/amiconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/attrib.h' is detected to be 'c'
+DEBUG: Language of file 'include/beconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/bitmfile.h' is detected to be 'c'
+DEBUG: Language of file 'include/botl.h' is detected to be 'c'
+DEBUG: Language of file 'include/color.h' is detected to be 'c'
+DEBUG: Language of file 'include/config.h' is detected to be 'c'
+DEBUG: Language of file 'include/artilist.h' is detected to be 'c'
+DEBUG: Language of file 'include/config1.h' is detected to be 'c'
+DEBUG: Language of file 'include/context.h' is detected to be 'c'
+DEBUG: Language of file 'include/coord.h' is detected to be 'c'
+DEBUG: Language of file 'include/decl.h' is detected to be 'c'
+DEBUG: Language of file 'include/def_os2.h' is detected to be 'c'
+DEBUG: Language of file 'include/dgn_file.h' is detected to be 'c'
+DEBUG: Language of file 'include/display.h' is detected to be 'c'
+DEBUG: Language of file 'include/dungeon.h' is detected to be 'c'
+DEBUG: Language of file 'include/dlb.h' is detected to be 'c'
+DEBUG: Language of file 'include/engrave.h' is detected to be 'c'
+DEBUG: Language of file 'include/extern.h' is detected to be 'c'
+DEBUG: Language of file 'include/flag.h' is detected to be 'c'
+DEBUG: Language of file 'include/func_tab.h' is detected to be 'c'
+DEBUG: Language of file 'include/gem_rsc.h' is detected to be 'c'
+DEBUG: Language of file 'include/global.h' is detected to be 'c'
+DEBUG: Language of file 'include/hack.h' is detected to be 'c'
+DEBUG: Language of file 'include/lev.h' is detected to be 'c'
+DEBUG: Language of file 'include/load_img.h' is detected to be 'c'
+DEBUG: Language of file 'include/mac-carbon.h' is detected to be 'c'
+DEBUG: Language of file 'include/mac-qt.h' is detected to be 'c'
+DEBUG: Language of file 'include/mac-term.h' is detected to be 'c'
+DEBUG: Language of file 'include/lint.h' is detected to be 'c'
+DEBUG: Language of file 'include/macpopup.h' is detected to be 'c'
+DEBUG: Language of file 'include/macconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/mactty.h' is detected to be 'c'
+DEBUG: Language of file 'include/macwin.h' is detected to be 'c'
+DEBUG: Language of file 'include/mail.h' is detected to be 'c'
+DEBUG: Language of file 'include/micro.h' is detected to be 'c'
+DEBUG: Language of file 'include/mkroom.h' is detected to be 'c'
+DEBUG: Language of file 'include/mextra.h' is detected to be 'c'
+DEBUG: Language of file 'include/monattk.h' is detected to be 'c'
+DEBUG: Language of file 'include/mfndpos.h' is detected to be 'c'
+DEBUG: Language of file 'include/mondata.h' is detected to be 'c'
+DEBUG: Language of file 'include/monflag.h' is detected to be 'c'
+DEBUG: Language of file 'include/monst.h' is detected to be 'c'
+DEBUG: Language of file 'include/monsym.h' is detected to be 'c'
+DEBUG: Language of file 'include/mttypriv.h' is detected to be 'c'
+DEBUG: Language of file 'include/ntconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/obj.h' is detected to be 'c'
+DEBUG: Language of file 'include/objclass.h' is detected to be 'c'
+DEBUG: Language of file 'include/os2conf.h' is detected to be 'c'
+DEBUG: Language of file 'include/patchlevel.h' is detected to be 'c'
+DEBUG: Language of file 'include/permonst.h' is detected to be 'c'
+DEBUG: Language of file 'include/pcconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/prop.h' is detected to be 'c'
+DEBUG: Language of file 'include/qt_clust.h' is detected to be 'c'
+DEBUG: Language of file 'include/qt_kde0.h' is detected to be 'c'
+DEBUG: Language of file 'include/qt_win.h' is detected to be 'c'
+DEBUG: Language of file 'include/qt_xpms.h' is detected to be 'c'
+DEBUG: Language of file 'include/qtext.h' is detected to be 'c'
+DEBUG: Language of file 'include/qttableview.h' is detected to be 'c'
+DEBUG: Language of file 'include/quest.h' is detected to be 'c'
+DEBUG: Language of file 'include/region.h' is detected to be 'c'
+DEBUG: Language of file 'include/rect.h' is detected to be 'c'
+DEBUG: Language of file 'include/rm.h' is detected to be 'c'
+DEBUG: Language of file 'include/skills.h' is detected to be 'c'
+DEBUG: Language of file 'include/sp_lev.h' is detected to be 'c'
+DEBUG: Language of file 'include/spell.h' is detected to be 'c'
+DEBUG: Language of file 'include/sys.h' is detected to be 'c'
+DEBUG: Language of file 'include/system.h' is detected to be 'c'
+DEBUG: Language of file 'include/tcap.h' is detected to be 'c'
+DEBUG: Language of file 'include/timeout.h' is detected to be 'c'
+DEBUG: Language of file 'include/tile2x11.h' is detected to be 'c'
+DEBUG: Language of file 'include/tosconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/tradstdc.h' is detected to be 'c'
+DEBUG: Language of file 'include/trampoli.h' is detected to be 'c'
+DEBUG: Language of file 'include/trap.h' is detected to be 'c'
+DEBUG: Language of file 'include/vmsconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/vision.h' is detected to be 'c'
+DEBUG: Language of file 'include/wceconf.h' is detected to be 'c'
+DEBUG: Language of file 'include/winX.h' is detected to be 'c'
+DEBUG: Language of file 'include/winGnome.h' is detected to be 'c'
+DEBUG: Language of file 'include/winami.h' is detected to be 'c'
+DEBUG: Language of file 'include/wingem.h' is detected to be 'c'
+DEBUG: Language of file 'include/winprocs.h' is detected to be 'c'
+DEBUG: Language of file 'include/wintty.h' is detected to be 'c'
+DEBUG: Language of file 'include/wintype.h' is detected to be 'c'
+DEBUG: Language of file 'include/xwindow.h' is detected to be 'c'
+DEBUG: Language of file 'include/xwindowp.h' is detected to be 'c'
+DEBUG: Language of file 'include/you.h' is detected to be 'c'
+DEBUG: Language of file 'include/pm.h' is detected to be 'c'
+DEBUG: Language of file 'include/onames.h' is detected to be 'c'
+DEBUG: Language of file 'include/vis_tab.h' is detected to be 'c'
+DEBUG: Language of file 'include/date.h' is detected to be 'c'
+DEBUG: Language of file 'include/dgn_comp.h' is detected to be 'c'
+DEBUG: Language of file 'include/tile.h' is detected to be 'c'
+DEBUG: Language of file 'include/youprop.h' is detected to be 'c'
+DEBUG: Language of file 'include/lev_comp.h' is detected to be 'c'
+DEBUG: Language of file 'include/unixconf.h' is detected to be 'c'
+DEBUG: Language of file 'src/allmain.c' is detected to be 'c'
+DEBUG: Language of file 'src/alloc.c' is detected to be 'c'
+DEBUG: Language of file 'src/apply.c' is detected to be 'c'
+DEBUG: Language of file 'src/artifact.c' is detected to be 'c'
+DEBUG: Language of file 'src/attrib.c' is detected to be 'c'
+DEBUG: Language of file 'src/ball.c' is detected to be 'c'
+DEBUG: Language of file 'src/bones.c' is detected to be 'c'
+DEBUG: Language of file 'src/botl.c' is detected to be 'c'
+DEBUG: Language of file 'src/cmd.c' is detected to be 'c'
+DEBUG: Language of file 'src/dbridge.c' is detected to be 'c'
+DEBUG: Language of file 'src/decl.c' is detected to be 'c'
+DEBUG: Language of file 'src/detect.c' is detected to be 'c'
+DEBUG: Language of file 'src/dig.c' is detected to be 'c'
+DEBUG: Language of file 'src/display.c' is detected to be 'c'
+DEBUG: Language of file 'src/dlb.c' is detected to be 'c'
+DEBUG: Language of file 'src/do.c' is detected to be 'c'
+DEBUG: Language of file 'src/do_name.c' is detected to be 'c'
+DEBUG: Language of file 'src/do_wear.c' is detected to be 'c'
+DEBUG: Language of file 'src/dog.c' is detected to be 'c'
+DEBUG: Language of file 'src/dogmove.c' is detected to be 'c'
+DEBUG: Language of file 'src/dokick.c' is detected to be 'c'
+DEBUG: Language of file 'src/dothrow.c' is detected to be 'c'
+DEBUG: Language of file 'src/drawing.c' is detected to be 'c'
+DEBUG: Language of file 'src/dungeon.c' is detected to be 'c'
+DEBUG: Language of file 'src/eat.c' is detected to be 'c'
+DEBUG: Language of file 'src/end.c' is detected to be 'c'
+DEBUG: Language of file 'src/engrave.c' is detected to be 'c'
+DEBUG: Language of file 'src/exper.c' is detected to be 'c'
+DEBUG: Language of file 'src/explode.c' is detected to be 'c'
+DEBUG: Language of file 'src/extralev.c' is detected to be 'c'
+DEBUG: Language of file 'src/files.c' is detected to be 'c'
+DEBUG: Language of file 'src/fountain.c' is detected to be 'c'
+DEBUG: Language of file 'src/hack.c' is detected to be 'c'
+DEBUG: Language of file 'src/hacklib.c' is detected to be 'c'
+DEBUG: Language of file 'src/invent.c' is detected to be 'c'
+DEBUG: Language of file 'src/light.c' is detected to be 'c'
+DEBUG: Language of file 'src/lock.c' is detected to be 'c'
+DEBUG: Language of file 'src/makemon.c' is detected to be 'c'
+DEBUG: Language of file 'src/mapglyph.c' is detected to be 'c'
+DEBUG: Language of file 'src/mcastu.c' is detected to be 'c'
+DEBUG: Language of file 'src/mail.c' is detected to be 'c'
+DEBUG: Language of file 'src/mhitm.c' is detected to be 'c'
+DEBUG: Language of file 'src/mhitu.c' is detected to be 'c'
+DEBUG: Language of file 'src/minion.c' is detected to be 'c'
+DEBUG: Language of file 'src/mklev.c' is detected to be 'c'
+DEBUG: Language of file 'src/mkmap.c' is detected to be 'c'
+DEBUG: Language of file 'src/mkmaze.c' is detected to be 'c'
+DEBUG: Language of file 'src/mkobj.c' is detected to be 'c'
+DEBUG: Language of file 'src/mkroom.c' is detected to be 'c'
+DEBUG: Language of file 'src/mon.c' is detected to be 'c'
+DEBUG: Language of file 'src/mondata.c' is detected to be 'c'
+DEBUG: Language of file 'src/monmove.c' is detected to be 'c'
+DEBUG: Language of file 'src/monst.c' is detected to be 'c'
+DEBUG: Language of file 'src/mplayer.c' is detected to be 'c'
+DEBUG: Language of file 'src/mthrowu.c' is detected to be 'c'
+DEBUG: Language of file 'src/muse.c' is detected to be 'c'
+DEBUG: Language of file 'src/music.c' is detected to be 'c'
+DEBUG: Language of file 'src/o_init.c' is detected to be 'c'
+DEBUG: Language of file 'src/objects.c' is detected to be 'c'
+DEBUG: Language of file 'src/objnam.c' is detected to be 'c'
+DEBUG: Language of file 'src/options.c' is detected to be 'c'
+DEBUG: Language of file 'src/pager.c' is detected to be 'c'
+DEBUG: Language of file 'src/pickup.c' is detected to be 'c'
+DEBUG: Language of file 'src/pline.c' is detected to be 'c'
+DEBUG: Language of file 'src/polyself.c' is detected to be 'c'
+DEBUG: Language of file 'src/potion.c' is detected to be 'c'
+DEBUG: Language of file 'src/pray.c' is detected to be 'c'
+DEBUG: Language of file 'src/priest.c' is detected to be 'c'
+DEBUG: Language of file 'src/quest.c' is detected to be 'c'
+DEBUG: Language of file 'src/questpgr.c' is detected to be 'c'
+DEBUG: Language of file 'src/read.c' is detected to be 'c'
+DEBUG: Language of file 'src/rect.c' is detected to be 'c'
+DEBUG: Language of file 'src/region.c' is detected to be 'c'
+DEBUG: Language of file 'src/restore.c' is detected to be 'c'
+DEBUG: Language of file 'src/rip.c' is detected to be 'c'
+DEBUG: Language of file 'src/rnd.c' is detected to be 'c'
+DEBUG: Language of file 'src/role.c' is detected to be 'c'
+DEBUG: Language of file 'src/rumors.c' is detected to be 'c'
+DEBUG: Language of file 'src/save.c' is detected to be 'c'
+DEBUG: Language of file 'src/shk.c' is detected to be 'c'
+DEBUG: Language of file 'src/shknam.c' is detected to be 'c'
+DEBUG: Language of file 'src/sit.c' is detected to be 'c'
+DEBUG: Language of file 'src/sounds.c' is detected to be 'c'
+DEBUG: Language of file 'src/sp_lev.c' is detected to be 'c'
+DEBUG: Language of file 'src/spell.c' is detected to be 'c'
+DEBUG: Language of file 'src/steal.c' is detected to be 'c'
+DEBUG: Language of file 'src/steed.c' is detected to be 'c'
+DEBUG: Language of file 'src/sys.c' is detected to be 'c'
+DEBUG: Language of file 'src/teleport.c' is detected to be 'c'
+DEBUG: Language of file 'src/timeout.c' is detected to be 'c'
+DEBUG: Language of file 'src/topten.c' is detected to be 'c'
+DEBUG: Language of file 'src/track.c' is detected to be 'c'
+DEBUG: Language of file 'src/trap.c' is detected to be 'c'
+DEBUG: Language of file 'src/u_init.c' is detected to be 'c'
+DEBUG: Language of file 'src/uhitm.c' is detected to be 'c'
+DEBUG: Language of file 'src/vault.c' is detected to be 'c'
+DEBUG: Language of file 'src/version.c' is detected to be 'c'
+DEBUG: Language of file 'src/vision.c' is detected to be 'c'
+DEBUG: Language of file 'src/weapon.c' is detected to be 'c'
+DEBUG: Language of file 'src/were.c' is detected to be 'c'
+DEBUG: Language of file 'src/wield.c' is detected to be 'c'
+DEBUG: Language of file 'src/wizard.c' is detected to be 'c'
+DEBUG: Language of file 'src/windows.c' is detected to be 'c'
+DEBUG: Language of file 'src/worm.c' is detected to be 'c'
+DEBUG: Language of file 'src/worn.c' is detected to be 'c'
+DEBUG: Language of file 'src/write.c' is detected to be 'c'
+DEBUG: Language of file 'src/zap.c' is detected to be 'c'
+DEBUG: Language of file 'src/vis_tab.c' is detected to be 'c'
+DEBUG: Language of file 'src/tile.c' is detected to be 'c'
+DEBUG: Language of file 'src/monstr.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/amidos.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/amigst.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/amimenu.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/amirip.c' is detected to be 'c'
+INFO: Invalid character encountered in file /home/dad/nethack-3.6.0/sys/amiga/amimenu.c at line 4 for encoding UTF-8. Please fix file content or configure the encoding to be used using property 'sonar.sourceEncoding'.
+DEBUG: Language of file 'sys/amiga/amisnd.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/amistack.c' is detected to be 'c'
+INFO: Invalid character encountered in file /home/dad/nethack-3.6.0/sys/amiga/amistack.c at line 2 for encoding UTF-8. Please fix file content or configure the encoding to be used using property 'sonar.sourceEncoding'.
+DEBUG: Language of file 'sys/amiga/amitty.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/amiwind.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/clipwin.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/colorwin.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/txt2iff.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winami.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winchar.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/cvtsnd.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/windefs.h' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winext.h' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winfuncs.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winkey.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winmenu.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winproto.h' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winreq.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/winstr.c' is detected to be 'c'
+DEBUG: Language of file 'sys/amiga/xpm2iff.c' is detected to be 'c'
+DEBUG: Language of file 'sys/atari/tos.c' is detected to be 'c'
+DEBUG: Language of file 'sys/be/bemain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/dprintf.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/maccurs.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/macerrs.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/macfile.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/macmain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/macmenu.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/mactopl.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/mactty.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/macunix.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/macwin.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/mgetline.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/mmodal.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/mrecover.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/macsnd.c' is detected to be 'c'
+DEBUG: Language of file 'sys/mac/mttymain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/msdos.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/ovlinit.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/pckeys.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/pctiles.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/pctiles.h' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/pcvideo.h' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/portio.h' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/sound.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/video.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/tile2bin.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/vidtxt.c' is detected to be 'c'
+DEBUG: Language of file 'sys/msdos/vidvga.c' is detected to be 'c'
+DEBUG: Language of file 'sys/os2/os2.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/cppregex.cpp' is detected to be 'cpp'
+DEBUG: Language of file 'sys/share/dgn_comp.h' is detected to be 'c'
+DEBUG: Language of file 'sys/share/dgn_lex.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/dgn_yacc.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/ioctl.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/lev_comp.h' is detected to be 'c'
+DEBUG: Language of file 'sys/share/lev_lex.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/lev_yacc.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/nhlan.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/pcmain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/pcsys.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/pctty.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/pcunix.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/pmatchregex.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/posixregex.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/random.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/tclib.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/unixtty.c' is detected to be 'c'
+DEBUG: Language of file 'sys/share/uudecode.c' is detected to be 'c'
+DEBUG: Language of file 'sys/unix/unixmain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/unix/unixres.c' is detected to be 'c'
+DEBUG: Language of file 'sys/unix/unixunix.c' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/lev_lex.h' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/oldcrtl.c' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/vmsfiles.c' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/vmsmail.c' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/vmsmain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/vmsmisc.c' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/vmstty.c' is detected to be 'c'
+DEBUG: Language of file 'sys/vms/vmsunix.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/ceinc/assert.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/ceinc/errno.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/ceinc/fcntl.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/ceinc/sys/stat.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/celib.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/cesound.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhaskyn.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhaskyn.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhcmd.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhcmd.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhcolor.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhcolor.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhdlg.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhdlg.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhfont.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhfont.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhinput.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhinput.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmain.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmap.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmap.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmenu.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmenu.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmsg.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmsgwnd.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhmsgwnd.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhrip.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhrip.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhstatus.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhstatus.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhtext.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhtext.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhtxtbuf.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mhtxtbuf.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/mswproc.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/newres.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/resource.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/winMS.h' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/winhack.c' is detected to be 'c'
+DEBUG: Language of file 'sys/wince/winmain.c' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/nh340key.c' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/nhdefkey.c' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/nhraykey.c' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/ntsound.c' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/nttty.c' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/stubs.c' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/win32api.h' is detected to be 'c'
+DEBUG: Language of file 'sys/winnt/winnt.c' is detected to be 'c'
+DEBUG: Language of file 'util/dgn_main.c' is detected to be 'c'
+DEBUG: Language of file 'util/dlb_main.c' is detected to be 'c'
+DEBUG: Language of file 'util/lev_main.c' is detected to be 'c'
+DEBUG: Language of file 'util/makedefs.c' is detected to be 'c'
+DEBUG: Language of file 'util/mdgrep.h' is detected to be 'c'
+DEBUG: Language of file 'util/panic.c' is detected to be 'c'
+DEBUG: Language of file 'util/recover.c' is detected to be 'c'
+DEBUG: Language of file 'util/dgn_yacc.c' is detected to be 'c'
+DEBUG: Language of file 'util/dgn_lex.c' is detected to be 'c'
+DEBUG: Language of file 'util/lev_lex.c' is detected to be 'c'
+DEBUG: Language of file 'util/lev_yacc.c' is detected to be 'c'
+DEBUG: Language of file 'util/tiletxt.c' is detected to be 'c'
+DEBUG: Language of file 'win/Qt/qt_clust.cpp' is detected to be 'cpp'
+DEBUG: Language of file 'win/Qt/qt_win.cpp' is detected to be 'cpp'
+DEBUG: Language of file 'win/Qt/qttableview.cpp' is detected to be 'cpp'
+DEBUG: Language of file 'win/Qt/tileedit.cpp' is detected to be 'cpp'
+DEBUG: Language of file 'win/Qt/tileedit.h' is detected to be 'c'
+DEBUG: Language of file 'win/X11/Window.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/dialogs.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/tile2x11.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/winX.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/winmap.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/winmenu.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/winmesg.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/winmisc.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/winstat.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/wintext.c' is detected to be 'c'
+DEBUG: Language of file 'win/X11/winval.c' is detected to be 'c'
+DEBUG: Language of file 'win/chain/wc_chainout.c' is detected to be 'c'
+DEBUG: Language of file 'win/chain/wc_chainin.c' is detected to be 'c'
+DEBUG: Language of file 'win/chain/wc_trace.c' is detected to be 'c'
+DEBUG: Language of file 'win/gem/bitmfile.c' is detected to be 'c'
+DEBUG: Language of file 'win/gem/gr_rect.c' is detected to be 'c'
+DEBUG: Language of file 'win/gem/gr_rect.h' is detected to be 'c'
+DEBUG: Language of file 'win/gem/load_img.c' is detected to be 'c'
+DEBUG: Language of file 'win/gem/tile2img.c' is detected to be 'c'
+DEBUG: Language of file 'win/gem/wingem.c' is detected to be 'c'
+DEBUG: Language of file 'win/gem/wingem1.c' is detected to be 'c'
+DEBUG: Language of file 'win/gem/xpm2img.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gn_xpms.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnaskstr.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnbind.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnaskstr.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnbind.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnglyph.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnglyph.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmain.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmain.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmap.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmap.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmenu.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmenu.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmesg.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnmesg.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnomeprv.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnopts.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnopts.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnplayer.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnplayer.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnsignal.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnsignal.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnstatus.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnstatus.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gntext.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gntext.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnworn.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnworn.h' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnyesno.c' is detected to be 'c'
+DEBUG: Language of file 'win/gnome/gnyesno.h' is detected to be 'c'
+DEBUG: Language of file 'win/share/gifread.c' is detected to be 'c'
+DEBUG: Language of file 'win/share/ppmwrite.c' is detected to be 'c'
+DEBUG: Language of file 'win/share/thintile.c' is detected to be 'c'
+DEBUG: Language of file 'win/share/tile.h' is detected to be 'c'
+DEBUG: Language of file 'win/share/tile2bmp.c' is detected to be 'c'
+DEBUG: Language of file 'win/share/tilemap.c' is detected to be 'c'
+DEBUG: Language of file 'win/share/tiletext.c' is detected to be 'c'
+DEBUG: Language of file 'win/tty/getline.c' is detected to be 'c'
+DEBUG: Language of file 'win/tty/termcap.c' is detected to be 'c'
+DEBUG: Language of file 'win/tty/wintty.c' is detected to be 'c'
+DEBUG: Language of file 'win/tty/topl.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhaskyn.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhaskyn.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhdlg.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhdlg.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhfont.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhfont.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhinput.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhinput.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmain.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmain.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmap.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmap.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmenu.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmenu.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmsg.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmsgwnd.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhmsgwnd.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhrip.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhrip.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhsplash.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhsplash.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhstatus.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhstatus.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhtext.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mhtext.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/mswproc.c' is detected to be 'c'
+DEBUG: Language of file 'win/win32/resource.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/winMS.h' is detected to be 'c'
+DEBUG: Language of file 'win/win32/winhack.c' is detected to be 'c'
+INFO: 450 files indexed
+INFO: Quality profile for c: Sonar way
+INFO: Quality profile for cpp: Sonar way
+INFO: JaCoCoSensor: JaCoCo report not found : /home/dad/nethack-3.6.0/target/jacoco.exec
+INFO: JaCoCoItSensor: JaCoCo IT report not found: /home/dad/nethack-3.6.0/target/jacoco-it.exec
+DEBUG: Code colorizer, supported languages: cs,web
+DEBUG: Sensors : Lines Sensor (wrapped) -> SquidSensorC -> SquidSensorCpp -> SCM Sensor (wrapped) -> Zero Coverage Sensor (wrapped) -> Code Colorizer Sensor (wrapped) -> CPD Block Indexer (wrapped)
+INFO: Analysis report generated in /home/dad/nethack-3.6.0/.sonar/batch-report
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION FAILURE
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 6.980s
+INFO: Final Memory: 51M/252M
+INFO: ------------------------------------------------------------------------
