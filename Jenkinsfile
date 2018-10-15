@@ -4,7 +4,7 @@ pipeline {
      stage('build') {
         steps {
 	   sh "pwd"
-	   sh "make"
+	   sh "/usr/bin/make"
 	}
      }
    }
