@@ -8,7 +8,8 @@ pipeline {
 	   sh "pwd"
 	   sh '''#!/bin/bash
 	         make -j 4
-	   '''
+                 ls -alth src/nethack
+           '''
 	}
      }
      stage('build_debug') {
@@ -22,6 +23,7 @@ pipeline {
 	      sed -i 's/CFLAGS = -O2 -fomit-frame-pointer/CFLAGS = -g/g' Makefile
 	      cd ..
               make -j 4
+              ls -alth src/nethack
 	   '''
 	}
      }
