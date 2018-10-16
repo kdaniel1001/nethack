@@ -1,6 +1,6 @@
 pipeline {
    agent {
-      label ('master')
+      label ('linux_builder')
    }
    stages{
      stage('build') {
