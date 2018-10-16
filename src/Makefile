@@ -53,7 +53,7 @@ SHELL=/bin/sh
 # SHELL=E:/GEMINI2/MUPFEL.TTP
 
 # Usually, the C compiler driver is used for linking:
-#LINK=$(CC)
+LINK=$(CC)
 
 # Pick the SYSSRC and SYSOBJ lines corresponding to your desired operating
 # system.
@@ -141,7 +141,7 @@ CC = gcc
 
 # flags for Linux
 #   compile normally
-CFLAGS = -g -I../include
+CFLAGS = -O2 -fomit-frame-pointer -I../include
 LFLAGS = -L/usr/X11R6/lib
 #   OR compile backwards compatible a.out format
 # CFLAGS = -O2 -b i486-linuxaout -fomit-frame-pointer -I../include
