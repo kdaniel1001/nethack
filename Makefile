@@ -34,17 +34,17 @@ NHSROOT=.
 PREFIX	 = /data
 GAME     = nethack
 # GAME     = nethack.prg
-#GAMEUID  = games
+GAMEUID  = games
 GAMEGRP  = games
 
 # Permissions - some places use setgid instead of setuid, for instance
 # See also the option "SECURE" in include/config.h
 GAMEPERM = 02755
 FILEPERM = 0664
-# VARFILEPERM = 0644
+VARFILEPERM = 0644
 EXEPERM  = 0755
 DIRPERM  = 0775
-# VARDIRPERM = 0755
+VARDIRPERM = 0755
 
 # VARDIR may also appear in unixconf.h as "VAR_PLAYGROUND" else HACKDIR
 #
@@ -53,8 +53,9 @@ DIRPERM  = 0775
 # therefore there should not be anything in HACKDIR that you want to keep
 # (if there is, you'll have to do the installation by hand or modify the
 # instructions)
-#HACKDIR  = $(PREFIX)/games/lib/$(GAME)dir
-#VARDIR  = $(HACKDIR)
+HACKDIR  = $(PREFIX)/games/lib/$(GAME)dir
+VARDIR  = $(HACKDIR)
+INSTDIR = $(HACKDIR)
 # Where nethack.sh in installed.  If this is not defined, the wrapper is not used.
 #SHELLDIR = $(PREFIX)/games
 
@@ -83,8 +84,8 @@ VARDAT = $(VARDATD) $(VARDATND)
 # other permission-related reasons.  If that happens, you may want to set the
 # command to "true", which is a no-op. Note that disabling chown or chgrp
 # will only work if setuid (or setgid) behavior is not desired or required.
-#CHOWN = chown
-#CHGRP = chgrp
+CHOWN = chown
+CHGRP = chgrp
 
 #
 # end of configuration
@@ -281,7 +282,7 @@ install: rootcheck $(GAME) recover $(VARDAT) dungeon spec_levs
 	rm -rf $(INSTDIR) $(VARDIR)
 	-mkdir -p $(INSTDIR) $(VARDIR) $(VARDIR)/save
 	if test -d ./-p; then rmdir ./-p; fi
-	-$(CHOWN) $(GAMEUID) $(INSTDIR) $(VARDIR) $(VARDIR)/save
+	$(CHOWN) $(GAMEUID) $(INSTDIR) $(VARDIR) $(VARDIR)/save
 	$(CHGRP) $(GAMEGRP) $(INSTDIR) $(VARDIR) $(VARDIR)/save
 # order counts here:
 	chmod $(DIRPERM) $(INSTDIR)

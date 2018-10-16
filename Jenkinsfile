@@ -9,6 +9,8 @@ pipeline {
 	   sh '''#!/bin/bash
 	         make -j 4
                  ls -alth src/nethack
+		 sudo make install
+		 sudo tar cvzf nethack.tgz /data/games
            '''
 	}
      }
@@ -24,6 +26,8 @@ pipeline {
 	      cd ..
               make -j 4
               ls -alth src/nethack
+	      sudo make install
+	      sudo tar cvzf nethack.tgz /data/games
 	   '''
 	}
      }
