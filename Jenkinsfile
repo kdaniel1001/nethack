@@ -15,12 +15,12 @@ pipeline {
         steps {
 	   sh "pwd"
 	   sh '''#!/bin/bash
-              cd src
-	      sed -i 's/CFLAGS = -O2 -fomit-frame-pointer/CFLAGS = -g/g' Makefile
-	      cd ../util
-	      sed -i 's/CFLAGS = -O2 -fomit-frame-pointer/CFLAGS = -g/g' Makefile
-	      cd ..
-              make -j 4 
+              cd src\n
+	      sed -i 's/CFLAGS = -O2 -fomit-frame-pointer/CFLAGS = -g/g' Makefile\n
+	      cd ../util\n
+	      sed -i 's/CFLAGS = -O2 -fomit-frame-pointer/CFLAGS = -g/g' Makefile\n
+	      cd ..\n
+              make -j 4 \n
 	   '''
 	}
      }
