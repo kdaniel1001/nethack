@@ -7,7 +7,7 @@ pipeline {
         steps {
 	   sh "pwd"
 	   sh '''#!/bin/bash
-	         /usr/bin/make
+	         make -j 4
 	   '''
 	}
      }
