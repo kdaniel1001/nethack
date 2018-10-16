@@ -11,5 +11,13 @@ pipeline {
 	   '''
 	}
      }
+     stage('build_debug') {
+        steps {
+	   sh "pwd"
+	   sh '''#!/bin/bash
+	         make -j 4 -g3
+	   '''
+	}
+     }
    }
 }
